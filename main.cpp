@@ -8,6 +8,7 @@
 
 #include <iostream>
 using namespace std;
+const double PER_MILE = 0.58;
 
 
 void carRental();
@@ -28,14 +29,14 @@ int main(){
 
 void carRental(){
     char ch;
-    double PER_MILE;
+    double carCost;
     char privateCar;
     
     cout << "Did you rent a car? (y/n): ";
     cin >> ch;
         if (ch == 'y' || ch == 'Y'){
             cout << "Enter cost of the rental car: ";
-            cin >> PER_MILE;
+            cin >> carCost;
             }
         else if(ch == 'n' || ch =='N'){
             cout << "Was a private vehicle used? (y/n): ";
@@ -45,7 +46,7 @@ void carRental(){
             costPerMile();
             }
             else if(privateCar == 'n' || privateCar == 'N'){
-                PER_MILE = 0;
+                carCost = 0;
             }
         else if (ch != 'Y' || ch!= 'y' || ch != 'N' || ch != 'n'){
             cout << "Error. Invalid input, please try again";
@@ -63,14 +64,14 @@ void carRental(){
 
 void costPerMile(){
     
-    double PER_MILE;
+    double carCost;
     
     int milesDriven;
     
     cout << "How many miles were driven? ";
     cin >> milesDriven;
     
-    PER_MILE = milesDriven * 0.58;
+    carCost = milesDriven * PER_MILE;
     
-    cout << "Total is: $ " << PER_MILE << endl;
+    cout << "Total is: $ " << carCost << endl;
 }
