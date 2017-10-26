@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+
 using namespace std;
 const double PER_MILE = 0.58;
 
@@ -14,17 +15,44 @@ const double PER_MILE = 0.58;
 void carRental();
 void costPerMile();
 
-int main(){
-    
+int main()
+{
+    tripLength();
+    airFair();
+    cout << endl;
+    conferenceFees();
     carRental();
-    
     return 0;
 }
+
 /***********************************************
- 
+    Trip Length
+    Function gets the total number of days spent
+    on the trip.
+***********************************************/
+void tripLength()
+{
+    int days;
+    cout << "Amount of days on trip: ";
+    cin >> days;
+}
+
+
+/********************************************
+AirFair Fees
+********************************************/
+void airFair()
+{
+    double cost, reimbursement;
+    cout << "Enter cost of round trip: ";
+    cin >> cost;
+    reimbursement = cost;
+    cout << cost << " " << reimbursement;
+}
+
+/***********************************************
  void carRental() function determines the amount
  of cars rented, if a car was rented at all
- 
  **********************************************/
 
 void carRental(){
@@ -75,3 +103,21 @@ void costPerMile(){
     
     cout << "Total is: $ " << carCost << endl;
 }
+/**********************************
+    Taxi Fees
+**********************************/
+
+/***********************************
+    Conference Fees
+***********************************/
+void conferenceFees()
+{
+    double conferenceFee, reimbursement;
+    cout << "Enter cost of conference registration fees: ";
+    cin >> conferenceFee;
+    reimbursement = conferenceFee;
+    cout << conferenceFee << " " << reimbursement;
+}
+
+
+
